@@ -1,4 +1,36 @@
 // Curated icon set. Icons are part of the design system: add here, import from the package root.
-
+export {
+  ArrowUp,
+  AtSign,
+  Blocks,
+  Bot,
+  Check,
+  ChevronDown,
+  Command,
+  Cpu,
+  FileCode,
+  Files,
+  FolderOpen,
+  GitBranch,
+  Keyboard,
+  KeyRound,
+  MessageSquare,
+  Monitor,
+  Moon,
+  PanelBottom,
+  PanelLeft,
+  PanelRight,
+  Palette,
+  Paperclip,
+  Play,
+  Plus,
+  Search,
+  Server,
+  Settings,
+  Sparkles,
+  SquarePen,
+  SquareTerminal,
+  Sun,
+  X,
+} from "lucide-react";
 export type { LucideIcon } from "lucide-react";
-export { FolderOpen, Monitor, Moon, Plus, Search, Sun } from "lucide-react";

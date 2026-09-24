@@ -1,6 +1,36 @@
 export { cx } from "./cx";
 export * from "./icons";
-export { duration, ease, prefersReducedMotion, useReveal } from "./motion";
+export {
+  duration,
+  ease,
+  type PresenceKind,
+  prefersReducedMotion,
+  useCollapseMotion,
+  useEnterOnChange,
+  usePresence,
+  useReveal,
+  useScrollReveal,
+  useScrolled,
+  useSlideIndicator,
+  useStartup,
+} from "./motion";
+export { Dialog, type DialogProps } from "./overlays/Dialog";
+export { DropdownMenu, type DropdownMenuProps, type MenuEntry } from "./overlays/Menu";
+export { Splitter, type SplitterProps } from "./overlays/Splitter";
+export { Tooltip, type TooltipProps } from "./overlays/Tooltip";
+export {
+  SearchField,
+  type SearchFieldProps,
+  SegmentedControl,
+  type SegmentedControlProps,
+  type SegmentedOption,
+} from "./patterns/Fields";
+export {
+  EmptyState,
+  type EmptyStateProps,
+  PanelHeader,
+  type PanelHeaderProps,
+} from "./patterns/Panel";
 export {
   Badge,
   type BadgeProps,
@@ -29,5 +59,6 @@ export {
   type ResolvedTheme,
   resolveTheme,
   type ThemePreference,
+  useApplyTheme,
   useThemePreference,
 } from "./theme";

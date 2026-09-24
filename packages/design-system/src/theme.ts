@@ -18,13 +18,8 @@ export function applyTheme(preference: ThemePreference): ResolvedTheme {
   return resolved;
 }
 
-/** Applies the theme to <html> and follows OS changes while preference is "system".
- *  Persistence moves to the settings store (native SQLite) in a later phase. */
-export function useThemePreference(
-  initial: ThemePreference = "dark",
-): readonly [ThemePreference, (next: ThemePreference) => void] {
-  const [preference, setPreference] = useState<ThemePreference>(initial);
-
+/** Applies the preference to <html> and follows OS changes while it is "system". */
+export function useApplyTheme(preference: ThemePreference): void {
   useEffect(() => {
     applyTheme(preference);
     if (preference !== "system") {
@@ -35,6 +30,13 @@ export function useThemePreference(
     query.addEventListener("change", onChange);
     return () => query.removeEventListener("change", onChange);
   }, [preference]);
+}
 
+/** Local-state variant kept for previews. The app shell uses the persisted uiStore instead. */
+export function useThemePreference(
+  initial: ThemePreference = "dark",
+): readonly [ThemePreference, (next: ThemePreference) => void] {
+  const [preference, setPreference] = useState<ThemePreference>(initial);
+  useApplyTheme(preference);
   return [preference, setPreference] as const;
 }

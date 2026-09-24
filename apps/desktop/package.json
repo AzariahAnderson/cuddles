@@ -12,9 +12,11 @@
   },
   "dependencies": {
     "@cuddles/design-system": "workspace:*",
+    "@tanstack/react-router": "1.170.39",
     "@tauri-apps/api": "2.11.1",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "zustand": "5.0.15"
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.3.3",
