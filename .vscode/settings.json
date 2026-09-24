@@ -7,6 +7,5 @@
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
-  "typescript.tsdk": "node_modules/typescript/lib",
   "files.eol": "\n"
 }

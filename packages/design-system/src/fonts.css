@@ -1,0 +1,4 @@
+/* Bundled offline (Fontsource). No CDN: the production CSP only allows 'self' fonts. */
+@import "@fontsource-variable/inter/index.css";
+@import "@fontsource-variable/source-serif-4/index.css";
+@import "@fontsource-variable/jetbrains-mono/index.css";

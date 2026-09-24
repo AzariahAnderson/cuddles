@@ -1,0 +1,161 @@
+/* Design tokens. Every colour, size and duration in the product comes from here. */
+
+:root {
+  /* typography */
+  --font-sans: "Inter Variable", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-serif: "Source Serif 4 Variable", "Iowan Old Style", Georgia, serif;
+  --font-mono: "JetBrains Mono Variable", "Cascadia Code", Consolas, monospace;
+  --text-2xs: 11px;
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-md: 14px;
+  --text-lg: 16px;
+  --text-xl: 20px;
+  --text-2xl: 30px;
+  --text-code: 12.5px;
+  --leading-tight: 1.2;
+  --leading-snug: 1.35;
+  --leading-normal: 1.55;
+
+  /* spacing (4px grid) */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* radii and borders */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+  --radius-pill: 999px;
+  --border-width: 1px;
+
+  /* motion */
+  --dur-instant: 90ms;
+  --dur-fast: 140ms;
+  --dur-base: 220ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* z-index scale */
+  --z-base: 0;
+  --z-sticky: 10;
+  --z-panel: 20;
+  --z-popover: 40;
+  --z-modal: 50;
+  --z-toast: 60;
+  --z-tooltip: 70;
+
+  /* layout dimensions */
+  --titlebar-h: 40px;
+  --toolbar-h: 36px;
+  --statusbar-h: 24px;
+  --tab-h: 34px;
+  --activitybar-w: 48px;
+  --sidebar-w: 260px;
+  --sidebar-min-w: 200px;
+  --sidebar-max-w: 480px;
+  --utility-panel-w: 340px;
+  --editor-min-w: 320px;
+  --composer-max-w: 760px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-instant: 0ms;
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+  }
+}
+
+/* Dark (default): warm graphite, light-orange accent */
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg-app: #1b1a18;
+  --bg-sidebar: #161514;
+  --bg-surface: #211f1d;
+  --bg-raised: #2a2825;
+  --bg-overlay: #2f2d2a;
+  --bg-inset: #141312;
+  --bg-hover: rgb(255 245 235 / 0.05);
+  --bg-active: rgb(255 245 235 / 0.09);
+
+  --border-subtle: #2b2926;
+  --border-default: #3b3835;
+  --border-strong: #524e49;
+
+  --text-primary: #ece8e1;
+  --text-secondary: #b5b0a6;
+  --text-tertiary: #8a857c;
+  --text-disabled: #5f5b54;
+
+  --accent: #ee9a63;
+  --accent-hover: #f3ab7d;
+  --accent-active: #e58a52;
+  --accent-subtle: rgb(238 154 99 / 0.14);
+  --accent-border: rgb(238 154 99 / 0.38);
+  --accent-text: #f2a877;
+  --on-accent: #1f1207;
+  --focus-ring: #f2a877;
+  --selection: rgb(238 154 99 / 0.28);
+
+  --success: #86bf8f;
+  --warning: #e2b660;
+  --error: #e58274;
+  --info: #86aedb;
+
+  --shadow-popover: 0 8px 24px rgb(0 0 0 / 0.45), 0 0 0 1px var(--border-default);
+  --shadow-modal: 0 24px 64px rgb(0 0 0 / 0.55), 0 0 0 1px var(--border-default);
+  --scroll-thumb: rgb(255 245 235 / 0.14);
+}
+
+/* Light: warm cream, same accent */
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --bg-app: #faf8f4;
+  --bg-sidebar: #f3f0ea;
+  --bg-surface: #ffffff;
+  --bg-raised: #f1eee8;
+  --bg-overlay: #ffffff;
+  --bg-inset: #efebe4;
+  --bg-hover: rgb(40 30 20 / 0.05);
+  --bg-active: rgb(40 30 20 / 0.09);
+
+  --border-subtle: #e8e3da;
+  --border-default: #d9d3c8;
+  --border-strong: #bdb6a9;
+
+  --text-primary: #2a2723;
+  --text-secondary: #5d5850;
+  --text-tertiary: #8b857b;
+  --text-disabled: #b5afa4;
+
+  --accent: #ee9a63;
+  --accent-hover: #e88b50;
+  --accent-active: #de7d40;
+  --accent-subtle: rgb(238 154 99 / 0.18);
+  --accent-border: rgb(214 122 60 / 0.45);
+  --accent-text: #b4581f;
+  --on-accent: #2a1508;
+  --focus-ring: #d9782f;
+  --selection: rgb(238 154 99 / 0.35);
+
+  --success: #3f8a55;
+  --warning: #a87a12;
+  --error: #c4453a;
+  --info: #3a6fb0;
+
+  --shadow-popover: 0 8px 24px rgb(60 40 20 / 0.14), 0 0 0 1px var(--border-default);
+  --shadow-modal: 0 24px 64px rgb(60 40 20 / 0.2), 0 0 0 1px var(--border-default);
+  --scroll-thumb: rgb(40 30 20 / 0.18);
+}
