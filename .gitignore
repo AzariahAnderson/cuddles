@@ -1,0 +1,52 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# build output
+dist/
+build/
+out/
+coverage/
+*.tsbuildinfo
+.vite/
+
+# rust
+target/
+**/target/
+apps/desktop/src-tauri/gen/
+
+# secrets and local env (never commit)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+tauri.private.key
+*.private.key
+
+# tests
+playwright-report/
+test-results/
+
+# logs and temp
+*.log
+npm-debug.log*
+pnpm-debug.log*
+*.tmp
+*.swp
+.cache/
+
+# editors and OS
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# local tooling not part of the project
+.qodo/

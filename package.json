@@ -1,0 +1,22 @@
+{
+  "name": "cuddles",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Open-source, local-first, provider-agnostic AI development environment (desktop).",
+  "packageManager": "pnpm@11.18.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "test": "pnpm -r --if-present test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.14",
+    "typescript": "7.0.2"
+  }
+}
