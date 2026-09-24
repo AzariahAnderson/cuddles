@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* Placeholder base. Replaced by the design-token layer in the design-system phase. */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #0c0c0d;
+  color: #e6e6e8;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}

@@ -1,0 +1,21 @@
+[package]
+name = "cuddles"
+version = "0.0.0"
+description = "Cuddles desktop runtime: privileged native services behind a typed IPC boundary."
+edition = "2021"
+rust-version = "1.85"
+publish = false
+
+[lib]
+name = "cuddles_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = "2.6.3"
+
+[dependencies]
+tauri = "~2.11"
+serde = { version = "1", features = ["derive"] }
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }

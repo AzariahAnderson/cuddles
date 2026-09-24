@@ -29,8 +29,8 @@ after checking peer-dependency compatibility and that the release is stable (not
 | @tauri-apps/cli | npm | 2.11.5 |
 | @tauri-apps/api | npm | 2.11.1 |
 | @biomejs/biome | npm | 2.5.14 |
-| tauri | crates.io | 3.0.0-alpha.2 |
-| tauri-build | crates.io | 3.0.0-alpha.1 |
+| tauri | crates.io | 2.11.6 (latest stable 2.x; 3.x is alpha and NOT adopted) |
+| tauri-build | crates.io | 2.6.3 (latest stable 2.x; 3.x is alpha and NOT adopted) |
 | serde | crates.io | 1.0.229 |
 | thiserror | crates.io | 2.0.21 |
 | tracing | crates.io | 0.1.44 |

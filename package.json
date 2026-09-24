@@ -8,6 +8,13 @@
     "node": ">=22"
   },
   "scripts": {
+    "dev": "pnpm --filter @cuddles/desktop tauri dev",
+    "dev:web": "pnpm --filter @cuddles/desktop dev",
+    "build:web": "pnpm --filter @cuddles/desktop build",
+    "build:desktop": "pnpm --filter @cuddles/desktop tauri build",
+    "rust:fmt": "cargo fmt --manifest-path apps/desktop/src-tauri/Cargo.toml --all",
+    "rust:check": "cargo check --manifest-path apps/desktop/src-tauri/Cargo.toml",
+    "rust:clippy": "cargo clippy --manifest-path apps/desktop/src-tauri/Cargo.toml --all-targets -- -D warnings",
     "format": "biome format --write .",
     "lint": "biome lint .",
     "check": "biome check .",
