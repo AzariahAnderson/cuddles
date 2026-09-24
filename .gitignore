@@ -50,3 +50,5 @@ desktop.ini
 
 # local tooling not part of the project
 .qodo/
+# local staging for the GitHub profile README
+profile-readme/
